@@ -1,0 +1,21 @@
+{
+  "name": "bio-wms-realtime-indoor-positioning-backend",
+  "version": "0.1.0",
+  "description": "Bio-WMS Real-time Indoor Positioning System Backend: Receives RSSI via TCP, calculates coordinates using trilateration, and pushes data to the frontend via Socket.io.",
+  "private": true,
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "simulate:tcp": "node scripts/simulate-tcp-client.js",
+    "dev:frontend": "npm --prefix frontend/dashboard run dev",
+    "build:frontend": "npm --prefix frontend/dashboard run build",
+    "start:all": "npm run build:frontend && npm run start"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
+
